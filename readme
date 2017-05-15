@@ -1,0 +1,18 @@
+/**
+ * @author Gopikrishna Putti - Apr 23, 2017
+ * About this project: 
+ * this is extension to the previous project SimpleRestService
+ * created on: April 23, 2017 for personal use only
+ * purpose: Simple RESTful webservices with persisting to db (derby used) thru JPA.
+ * Derby is started embedded mode. 
+ * JPA mapping is done through annotation.    
+ * jdk1.8, jetty, jersey, JPA
+ *
+ */
+
+
+modus operandi:
+1) run Main.java is main program. 
+2) go to http://localhost:8080/web/home.html
+3) go to http://localhost:8080/rest/contacts/list 
+ 
