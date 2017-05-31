@@ -5,6 +5,24 @@
 
 	<persistence-unit name="derby" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- mapping-file>META-INF/orm.xml</mapping-file -->
+		<class>com.yaams.dataobj.Contact</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1528/db;create=true" />
+			<property name="javax.persistence.jdbc.user" value="yaams" />
+			<property name="javax.persistence.jdbc.password" value="yaams" />
+
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+			<property name="eclipselink.logging.level" value="INFO" />
+			<property name="eclipselink.logging.file" value="logs/eclipselink.log" />
+		</properties>
+
+	</persistence-unit>
+
+	<persistence-unit name="derby_emb" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- <mapping-file>META-INF/orm.xml</mapping-file> -->
 		<class>com.yaams.dataobj.Contact</class>
 		<properties>
@@ -19,15 +37,14 @@
 			<!-- EclipseLink should create the database schema automatically -->
 			<property name="eclipselink.target-database" value="Derby" />
 			<property name="eclipselink.ddl-generation" value="create-tables" />
-			
-<!-- 			<property name="eclipselink.debug" value="ALL" />
-			<property name="eclipselink.weaving" value="static" />
-			<property name="eclipselink.logging.level" value="FINEST" />
-			<property name="eclipselink.logging.level.sql" value="FINEST" />
-			<property name="eclipselink.logging.level.cache" value="FINEST" />
- -->			
-			<!--   <property name="eclipselink.ddl-generation" value="create-tables" /> 
-			<property name="eclipselink.ddl-generation.output-mode"	value="database" /> -->
+
+			<!-- <property name="eclipselink.debug" value="ALL" /> <property name="eclipselink.weaving" 
+				value="static" /> <property name="eclipselink.logging.level" value="FINEST" 
+				/> <property name="eclipselink.logging.level.sql" value="FINEST" /> <property 
+				name="eclipselink.logging.level.cache" value="FINEST" /> -->
+			<!-- <property name="eclipselink.ddl-generation" value="create-tables" 
+				/> <property name="eclipselink.ddl-generation.output-mode" value="database" 
+				/> -->
 		</properties>
 	</persistence-unit>
 

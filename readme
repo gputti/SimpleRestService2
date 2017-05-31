@@ -16,3 +16,12 @@ modus operandi:
 2) go to http://localhost:8080/web/home.html
 3) go to http://localhost:8080/rest/contacts/list 
  
+To test persistence alone:
+run com.yaams.persistence.PersistenceService 
+
+next steps (5/14) 
+try running  com.yaams.persistence.PersistenceService with stand alone derby and see 
+if data getting inserted. 
+
+then extend UI to take all fields required for contact. 
+then do same for User. 

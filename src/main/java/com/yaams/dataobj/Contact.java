@@ -15,27 +15,19 @@ import javax.persistence.*;
 @Table(name="contacts")
 public class Contact {
 	
-	public enum Type {
-		EMAIL,
-		MOBILEPHONE,
-		LANDPHONE,
-		WHATSAPP,
-		SKYPE,
-		ADDRESS		
-	}
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public long id;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	public long id;	
 	public String value = null;
-	public String type = Type.EMAIL.name();
+	public String type = ContactType.EMAIL.name();
 	
 	public Contact() {
 		
 	}
 	
 	public Contact(String value ) {
-		this(value, Type.EMAIL.name());
+		this(value, ContactType.EMAIL.name());
 	}
 	
 	public Contact(String value, String type ) {
@@ -46,9 +38,9 @@ public class Contact {
 	public static Contact create(String val) {
 		Contact c = null;
 		if( val.contains("@")  || val.contains("\\.") ) {
-			c = new Contact(val, Type.EMAIL.name());
+			c = new Contact(val, ContactType.EMAIL.name());
 		} else {
-			c = new Contact(val, Type.MOBILEPHONE.name());
+			c = new Contact(val, ContactType.MOBILEPHONE.name());
 		}
 		return c;
 	}
@@ -97,7 +89,7 @@ public class Contact {
 
 	@Override
 	public String toString( ) {
-		return "id:" + id + type + " : " + value;
+		return "id:" + id + "; type: " + type + " : " + value;
 	}
 
 }

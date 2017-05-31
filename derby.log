@@ -1,8 +1,9 @@
+Mon May 29 09:01:57 PDT 2017 : Apache Derby Network Server - 10.13.1.1 - (1765088) started and ready to accept connections on port 1528
 ----------------------------------------------------------------
-Sun May 14 22:53:31 PDT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-0aab-3678-000005da4480 
-on database directory /Users/gputty/dev/workspace3/SimpleRestService2/yaamsdb with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
-Loaded from file:/Users/gputty/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+Mon May 29 10:35:29 PDT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-54f1-45bd-00001d8fe8a8 
+on database directory /Users/gputty/dev/workspace3/SimpleRestService2/db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/Users/gputty/dev/workspace3/SimpleRestService2/derby/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_20-b26
 user.dir=/Users/gputty/dev/workspace3/SimpleRestService2
@@ -11,3 +12,9 @@ os.arch=x86_64
 os.version=10.12.4
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon May 29 10:37:25 PDT 2017: Shutting down Derby engine
+----------------------------------------------------------------
+Mon May 29 10:37:25 PDT 2017:
+Shutting down instance a816c00e-015c-54f1-45bd-00001d8fe8a8 on database directory /Users/gputty/dev/workspace3/SimpleRestService2/db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------

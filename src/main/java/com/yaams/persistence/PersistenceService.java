@@ -34,13 +34,17 @@ public class PersistenceService {
 		if(obj == null ) return ;
 		
 		if(entityManager == null) {
-			entityManager = factory.createEntityManager();			
-		}		
-		entityManager.persist(obj);
+			entityManager = factory.createEntityManager();
+		}
+		entityManager.getTransaction( ).begin( );
+		entityManager.persist(obj);		
+		entityManager.getTransaction( ).commit( );
+
 	}
 	
 	public void close() {
 		if(entityManager != null && entityManager.isOpen() ) {
+			
 			entityManager.clear();
 			entityManager.close();
 		}
